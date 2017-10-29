@@ -2,10 +2,10 @@
 	
 class Tarjeta {	
 	
-protected $saldoactual, $viajeshechos, $viajes_plus;
+protected $saldoactual, $viajeshechos;
 
 public function saldo() {
-		return $this->saldo;
+		return $this->saldoactual;
 	}
 public function mostrarviajeshechos() {
 		return $this->viajeshechos;
