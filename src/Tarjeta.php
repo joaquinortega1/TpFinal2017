@@ -10,8 +10,11 @@ public function saldo() {
 public function mostrarviajeshechos() {
 		return $this->viajeshechos;
 	}
-public function pagar( Transporte $transporte, $tipo_boleto ) {
-		
+public function pagar( Transporte $transporte) {
+		$fh=new DateTime();
+		$fhv = $fh->format('Y-m-d-H-i-s');
+		$Viaje = new Viaje ($transporte, $fhv);
+		$this->viajeshechos[] = $nViaje;
 	}
 public function recargar($monto){
 	   if($monto == 332) {
@@ -26,3 +29,4 @@ public function recargar($monto){
 }
 
 }
+
