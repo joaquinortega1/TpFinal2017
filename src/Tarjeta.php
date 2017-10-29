@@ -14,7 +14,7 @@ public function pagar( Transporte $transporte) {
 		$fh=new DateTime();
 		$fhv = $fh->format('Y-m-d-H-i-s');
 		$Viaje = new Viaje ($transporte, $fhv);
-		$this->viajeshechos[] = $nViaje;
+		$this->viajeshechos[] = $Viaje;
 	}
 public function recargar($monto){
 	   if($monto == 332) {
@@ -29,4 +29,6 @@ public function recargar($monto){
 }
 
 }
-
+abstract class Transporte {
+	public boleto;
+}
