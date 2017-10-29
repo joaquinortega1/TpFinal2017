@@ -2,7 +2,7 @@
 	
 class Tarjeta {	
 	
-protected $saldo, $viajeshechos, $viajes_plus;
+protected $saldoactual, $viajeshechos, $viajes_plus;
 
 public function saldo() {
 		return $this->saldo;
@@ -13,8 +13,16 @@ public function mostrarviajeshechos() {
 public function pagar( Transporte $transporte, $tipo_boleto ) {
 		
 	}
-public function recargar(){
-
+public function recargar($monto){
+	   if($monto == 332) {
+            $this->saldoactual += 388;
+        }else{
+            if($monto == 500) {
+                $this->saldoactual += 652;          
+            }
+        }else{
+            $this->saldoactual += $monto;
+        }
 }
 
 }
